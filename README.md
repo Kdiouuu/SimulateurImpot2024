@@ -26,17 +26,13 @@ Le projet comprend un moteur de calcul (`SimulateurReusine`) et un adaptateur (`
 1. Clonez le dépôt :
 
 ```bash
-git clone https://github.com/votre-utilisateur/simulateurreusine.git
-cd simulateurreusine
+git clone https://github.com/Kdiouuu/SimulateurImpot2024.git
+
 ```
 
 2. Compilez le projet :
 
-```bash
-./mvnw compile
-```
-
-> Si vous n'utilisez pas le wrapper Maven (`mvnw`), utilisez simplement `mvn`.
+>  utilisez simplement `mvn`.
 
 ---
 
@@ -49,26 +45,14 @@ Lancez les tests unitaires avec :
 ```
 
 Tous les tests sont situés dans `src/test/java/simulateurreusine/SimulateurReusineTest.java`. La couverture des tests est de 100 %.
-
+Exécuter  les tests avec IntelliJ.
 ---
 
 ## ✅ Analyse de style (Checkstyle)
 
 Le projet utilise Checkstyle pour garantir la qualité du code source.
+Pour verifier checkstyle utilisez le plugin Checkstyle-IDEA
 
-### Lancer Checkstyle :
-
-```bash
-./mvnw checkstyle:check
-```
-
-### Générer un rapport HTML :
-
-```bash
-./mvnw checkstyle:checkstyle
-```
-
-Le rapport se trouve dans `target/site/checkstyle.html`.
 
 ---
 
@@ -100,17 +84,5 @@ System.out.println("Impôt net : " + simu.getImpotNet());
 - Abattement de 10 % plafonné
 - Décote pour faibles revenus
 - Contribution exceptionnelle sur hauts revenus
-
----
-
-## 🤝 Contribuer
-
-Les contributions sont les bienvenues ! Merci de respecter les conventions Checkstyle et d’ajouter des tests pour toute nouvelle fonctionnalité.
-
----
-
-## 📄 Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE`.
 
 ---

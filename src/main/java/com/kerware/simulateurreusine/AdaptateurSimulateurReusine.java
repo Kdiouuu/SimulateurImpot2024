@@ -8,14 +8,14 @@ import com.kerware.simulateur.SituationFamiliale;
  * Permet de valider la non-régression des anciens tests.
  * Exigence 4.1 : compatibilité descendante.
  */
-public class AdaptateurSimulateurReusine implements ICalculateurImpot {
+public final class AdaptateurSimulateurReusine implements ICalculateurImpot {
 
     private int revenu1 = 0;
     private int revenu2 = 0;
     private SituationFamiliale situation;
-    public int nbEnfants = 0;
-    public int nbEnfantsHandicapes = 0;
-    public boolean parentIsole = false;
+    private int nbEnfants = 0;
+    private int nbEnfantsHandicapes = 0;
+    private boolean parentIsole = false;
 
     private SimulateurReusine simulateur;
 
@@ -51,7 +51,9 @@ public class AdaptateurSimulateurReusine implements ICalculateurImpot {
 
     @Override
     public void calculImpotSurRevenuNet() {
-        FoyerFiscal foyer = new FoyerFiscal(revenu1, revenu2, situation, nbEnfants, nbEnfantsHandicapes, parentIsole);
+        FoyerFiscal foyer = new FoyerFiscal(
+                revenu1, revenu2, situation, nbEnfants, nbEnfantsHandicapes, parentIsole
+        );
         this.simulateur = new SimulateurReusine(foyer);
         simulateur.calculer();
     }
